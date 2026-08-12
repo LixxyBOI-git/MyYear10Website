@@ -38,11 +38,10 @@
         }
 
         .hero img {
-            max-width: 620px;          /* much bigger */
+            max-width: 620px;
             width: 90%;
             border-radius: 16px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-            /* removed the white border so it looks cleaner */
         }
 
         /* ===== Topic Sections ===== */
@@ -101,29 +100,33 @@
         }
 
         /* ===== Video Section ===== */
-        .video-section {
-            max-width: 1000px;
-            margin: 0 auto 4rem auto;
-            padding: 0 1.5rem;
-            display: flex;
-            flex-wrap: wrap;
+        .videos-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            align-items: center;
-            justify-content: center;
+            max-width: 1000px;
+            margin: 0 auto;
         }
 
-        .video-section video {
+        .video-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .video-card video {
             width: 100%;
-            max-width: 640px;
             border-radius: 12px;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
         }
 
         .video-description {
-            max-width: 300px;
-            font-size: 1.1rem;
-            line-height: 1.6;
+            font-size: 1.05rem;
+            line-height: 1.5;
             color: #333;
+            text-align: center;
+            max-width: 420px;
         }
 
         /* ===== Footer ===== */
@@ -193,14 +196,28 @@
             <h1>Audio/Visual</h1>
         </div>
 
-        <div class="video-section">
-            <video controls>
-                <source src="images/verity.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <p class="video-description">
-                This video is an edited version of another. The voices have been replaced with me and my friend's.
-            </p>
+        <div class="videos-row">
+            <!-- First Video -->
+            <div class="video-card">
+                <video controls>
+                    <source src="images/verity.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="video-description">
+                    This video is an edited version of another. The voices have been replaced with me and my friend's.
+                </p>
+            </div>
+
+            <!-- Minecraft Video -->
+            <div class="video-card">
+                <video controls>
+                    <source src="images/minecraft-spawn.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="video-description">
+                    This is a video with music from the show, The Amazing World of Gumball.
+                </p>
+            </div>
         </div>
     </section>
 
