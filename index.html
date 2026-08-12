@@ -1,85 +1,192 @@
-<!DOCTYPE html>
+HTML<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Digital Profile</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #f4f4f4;
+            color: #222;
+            line-height: 1.5;
+        }
+
+        /* ===== Hero Section ===== */
+        .hero {
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: white;
+            padding: 3rem 1.5rem;
+        }
+
+        .hero-text {
+            font-size: clamp(2.5rem, 7vw, 4.2rem);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero img {
+            max-width: 180px;
+            width: 100%;
+            border-radius: 50%;
+            border: 4px solid rgba(255, 255, 255, 0.25);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        /* ===== Topic Sections ===== */
+        .topic {
+            max-width: 1100px;
+            margin: 4rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .topic-title {
+            background: #1a1a2e;
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .topic-title h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        .topic-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .topic-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .topic-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .topic-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .topic-card-text {
+            padding: 1rem;
+            font-size: 1.15rem;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        /* ===== Video Section ===== */
+        .video-section {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 0 1.5rem;
+            text-align: center;
+        }
+
+        .video-section video {
+            width: 100%;
+            max-width: 640px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        /* ===== Footer ===== */
+        .footer {
+            background: #1a1a2e;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 4rem;
+            font-size: 0.95rem;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- The Hero Section -->
+    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-text">My Digital Profile</div>
+        <img src="images/bitmap.png" alt="My awesome star">
     </section>
 
-    <img src="images/bitmap.png" alt="My awesome star">
-
-</body>
-</html>
-                
-<!-- Topic one ------------------------------------------------------------------------------------------------- -->
-    <!-- The First Topic Section -->
+    <!-- Topic 1: Image Creation -->
     <section class="topic">
-        <!-- the topic title a big bar with text in it -->
         <div class="topic-title">
-            <h1>Image creation</h1>
+            <h1>Image Creation</h1>
         </div>
-        <!-- now a three column grid of images -->
         <div class="topic-content">
-            <!-- one "card" which includes an image with a text below it -->
             <div class="topic-card">
-                <img src="images/bitmp.png" alt="My awsome star"
-    
+                <img src="images/bitmp.png" alt="My Star">
                 <h2 class="topic-card-text">My Star</h2>
             </div>
             <div class="topic-card">
-                <img src="images/Backround.png" alt=Backround.png>
-                <h2 class="topic-card-text">My Backround</h2>
+                <img src="images/Backround.png" alt="My Background">
+                <h2 class="topic-card-text">My Background</h2>
             </div>
             <div class="topic-card">
-                <img src="images/pixil-frame-0.png" alt="change this too!">
-                <h2 class="topic-card-text">My Pixle</h2>
+                <img src="images/pixil-frame-0.png" alt="My Pixel Art">
+                <h2 class="topic-card-text">My Pixel</h2>
             </div>
         </div>
     </section>
-<!-- End of topic one------------------------------------------------------------------------------------------ -->
-  <section class="topic">
-        <!-- the topic title a big bar with text in it -->
+
+    <!-- Topic 2: 3D Modeling -->
+    <section class="topic">
         <div class="topic-title">
             <h1>3D Modeling</h1>
         </div>
-        <!-- now a three column grid of images -->
         <div class="topic-content">
-            <!-- one "card" which includes an image with a text below it -->
             <div class="topic-card">
-                <img src="images/submitMEheimatau.png" alt="My awsome star"
-    
+                <img src="images/submitMEheimatau.png" alt="My Hei Matau">
                 <h2 class="topic-card-text">My Hei Matau</h2>
             </div>
             <div class="topic-card">
-                <img src="images/Screenshot+2026-05-27+100501.png" alt=Backround.png>
+                <img src="images/Screenshot+2026-05-27+100501.png" alt="My Snowman">
                 <h2 class="topic-card-text">My Snowman</h2>
             </div>
             <div class="topic-card">
-                <img src="images/houaw.png" alt="change this too!">
+                <img src="images/houaw.png" alt="My Super Cool House">
                 <h2 class="topic-card-text">My Super Cool House</h2>
             </div>
         </div>
     </section>
-<!-- Copy and paste the section from above to make your next section -->
-<center>
-    <video width="640" height="360" controls>
-  <source src="images/verity.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-</center>
 
+    <!-- Video Section -->
+    <section class="video-section">
+        <video controls>
+            <source src="images/verity.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
 
-    <!-- A Simple Website Footer ------------------------------------------------------------------------------ -->
+    <!-- Footer -->
     <footer class="footer">
         <p>&copy; 2025 My Showcase Website By Student Name</p>
     </footer>
 
-<!-- The end of the whole page- no more content after this! -->
 </body>
 </html>
